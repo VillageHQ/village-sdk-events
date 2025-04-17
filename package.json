@@ -1,0 +1,14 @@
+{
+    "name": "village-sdk-events",
+    "version": "1.0.0",
+    "description": "Typed event registry for the Village SDK",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+      "build": "tsc"
+    },
+    "keywords": ["village", "sdk", "events", "typescript"],
+    "author": "Daniel Neto",
+    "license": "MIT"
+  }
+  
