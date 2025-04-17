@@ -19,6 +19,7 @@ exports.VillageEvents = void 0;
 exports.VillageEvents = {
     // 🔗 CTA interactions
     pathCtaClicked: "village.path.cta.clicked",
+    pathsCtaUpdated: "village.paths_cta.updated",
     // 👤 User sync events
     userSynced: "village.user.synced",
     userSyncFailed: "village.user.sync.failed",

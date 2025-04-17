@@ -15,6 +15,7 @@
  */
 export declare const VillageEvents: {
     readonly pathCtaClicked: "village.path.cta.clicked";
+    readonly pathsCtaUpdated: "village.paths_cta.updated";
     readonly userSynced: "village.user.synced";
     readonly userSyncFailed: "village.user.sync.failed";
     readonly oauthStarted: "village.oauth.started";

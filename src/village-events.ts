@@ -16,6 +16,7 @@
 export const VillageEvents = {
   // 🔗 CTA interactions
   pathCtaClicked: "village.path.cta.clicked",
+  pathsCtaUpdated: "village.paths_cta.updated",
 
   // 👤 User sync events
   userSynced: "village.user.synced",
