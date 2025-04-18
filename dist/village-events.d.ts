@@ -32,6 +32,18 @@ export declare const VillageEvents: {
  *   function emit<K extends VillageEventName>(event: K, data: VillageEventMap[K]) { ... }
  */
 export type VillageEventName = typeof VillageEvents[keyof typeof VillageEvents];
+export interface VillagePerson {
+    id: string;
+    identity_id: string;
+    first_name: string;
+    last_name: string;
+    full_name: string;
+    avatar?: string;
+    linkedin_identifier?: string;
+    linkedin_url?: string;
+    summary?: string;
+    village_person_url?: string;
+}
 /**
  * Typed payloads for each Village SDK event.
  */
@@ -45,14 +57,27 @@ export interface VillageEventMap {
      *   });
      */
     [VillageEvents.pathCtaClicked]: {
-        action: string;
-        data: {
-            introducer: {
-                name: string;
-                email: string;
+        source: string;
+        type: "village.path.cta.clicked";
+        index: number;
+        cta: {
+            label: string;
+            style?: Record<string, any>;
+        };
+        context: {
+            from: string;
+            path: {
+                start_person: VillagePerson;
+                connector_person?: VillagePerson;
+                end_person: VillagePerson;
+                start_connector_warmth_score?: number;
+                connector_end_warmth_score?: number;
+                start_end_warmth_score?: number;
+                type: string;
+                paid_intro?: any;
+                group_type?: any;
             };
-            timestamp: string;
-            callbackName?: string;
+            partnerDomain: string;
         };
     };
     /**
